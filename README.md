@@ -18,8 +18,8 @@ Roles:
 
 ## Integrantes
 
--Daniel Michel
--No one else :(
+- Daniel Michel
+- No one else :(
 
 ## Instalación
 
