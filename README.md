@@ -3,18 +3,18 @@
 El proyecto fue elaborado en base a los requerimientos adquiridos de una de las actividades de mi clase de 'Ingeniería de software'. Se trata de un software para una farmacia(física) donde se hace el manejo de empleados, productos y facturas. En esta farmacia es estrictamente necesario hacerte una cuenta para poder comprar. La cuenta de un cliente no tiene mucha utilidad para el cliente más allá de que la farmacia siga sus registros y te permita comprar.
 
 Enseguida algunas cosas relevantes para los roles
--Todos se registran donde mismo (a excepción del 'admin'), lo que hagan posteriormente hace que cambie su rol(a excepción del 'admin').
--Cualquiera se puede registrar, lo que te hace 'invitado'.
--Comprar algo con tu cuenta de 'invitado' te hace 'cliente'. 
--Un 'empleado' no se puede hacer 'cliente'.
--Sólo el admin puede contratar a un ‘invitado’ para que sea  ‘usuario’(empleado). 
--Un cliente no se puede hacer empleado.
+1. Todos se registran donde mismo (a excepción del 'admin'), lo que hagan posteriormente hace que cambie su rol(a excepción del 'admin').
+2. Cualquiera se puede registrar, lo que te hace 'invitado'.
+3. Comprar algo con tu cuenta de 'invitado' te hace 'cliente'. 
+4. Un 'empleado' no se puede hacer 'cliente'.
+5. Sólo el admin puede contratar a un ‘invitado’ para que sea  ‘usuario’(empleado). 
+6. Un cliente no se puede hacer empleado.
 
 Roles:
--Invitado: Sólo puede llegar a ver una pantalla de bienvenida y cambiar su información.
--Cliente: Sólo puede llegar a ver una pantalla de bienvenida y cambiar su información.
--Usuario(empleado): Lo anterior además de que que puede ver los registros de empleados, clientes, productos y facturas. Dispone de facturas en su totalidad(su trabajo);
--Admin: Lo anterior además de que dispone de la totalidad de funciones de empleados, clientes, productos y facturas.
+1. Invitado: Sólo puede llegar a ver una pantalla de bienvenida y cambiar su información.
+2. Cliente: Sólo puede llegar a ver una pantalla de bienvenida y cambiar su información.
+3. Usuario(empleado): Lo anterior además de que que puede ver los registros de empleados, clientes, productos y facturas. Dispone de facturas en su totalidad(su trabajo);
+4. Admin: Lo anterior además de que dispone de la totalidad de funciones de empleados, clientes, productos y facturas.
 
 ## Integrantes
 
