@@ -1,4 +1,4 @@
-@extends('usuarios.usuariosTheme')
+@extends('adminLTETheme')
 
 @section('content')
 	<div class="content-header">
@@ -37,7 +37,7 @@
               <div class="card-body">
 
               	<div class="card-body row justify-content-center align-items-center">
-                  <img class="img-circle elevation-1" style="height: 250px; width: 250px;" src="{{asset('dist/img/user2-160x160.jpg')}}" alt="User Image">
+                  <img class="img-circle elevation-1" style="height: 250px; width: 250px;" src="{{asset('dist/img/noimage.jpg')}}" alt="User Image">
 				</div>
 
                 @if($usuario->administrador==1)                       
@@ -49,14 +49,28 @@
                 <div class="form-group row">
                     <label for="nombre" class="col-sm-2 col-form-label">Nombre</label>
                     <div class="col-sm-10">
-                      <input type="text" class="form-control" id="nombre" value="{{$usuario->nombre}}" disabled="">
+                      <input type="text" class="form-control" id="nombre" value="{{$usuario->user->name}}" disabled="">
                     </div>
                  </div>
 
                  <div class="form-group row">
-                    <label for="apellido" class="col-sm-2 col-form-label">Apellido</label>
+                    <label for="curp" class="col-sm-2 col-form-label">CURP</label>
                     <div class="col-sm-10">
-                      <input type="text" class="form-control" id="apellido" value="{{$usuario->apellido}}" disabled="">
+                      <input type="text" class="form-control" id="curp" value="{{$usuario->curp}}" disabled="">
+                    </div>
+                 </div>
+
+                 <div class="form-group row">
+                    <label for="sucursal_id" class="col-sm-2 col-form-label">Sucursal</label>
+                    <div class="col-sm-10">                      
+                        <input type="text" class="form-control" id="sucursal_id" value="{{$usuario->sucursal->nombre}}" disabled="">                      
+                    </div>
+                 </div>
+
+                 <div class="form-group row">
+                    <label for="certificado" class="col-sm-2 col-form-label">Certificado</label>
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" id="certificado" value="{{$usuario->certificado}}" disabled="">
                     </div>
                  </div>
 
@@ -70,16 +84,11 @@
                  <div class="form-group row">
                     <label for="correo" class="col-sm-2 col-form-label">Correo</label>
                     <div class="col-sm-10">
-                      <input type="email" class="form-control" id="correo" value="{{$usuario->correo}}" disabled="">
+                      <input type="email" class="form-control" id="correo" value="{{$usuario->user->email}}" disabled="">
                     </div>
                  </div>
 
-                <form action="{{route('usuarios.destroy', [$usuario])}}" method="POST">
-					@method('DELETE')
-					@csrf
-					<button type="submit" class="btn btn-block btn-danger">Borrar</button>
-					
-				  </form>
+                <!-- eliminar inhabilitado porque no vi forma de que en factura no se caiga... so close, también está lo de que puede seguir haciendo el logueo --> 
               </div>
             </div>
             <!-- /.card -->          
